@@ -235,6 +235,7 @@ Partial Class Form1
         ' 
         ' IconClose
         ' 
+        IconClose.Anchor = AnchorStyles.Right
         IconClose.BackColor = Color.FromArgb(CByte(75), CByte(101), CByte(132))
         IconClose.IconChar = FontAwesome.Sharp.IconChar.X
         IconClose.IconColor = Color.White
