@@ -32,15 +32,17 @@ Partial Class Form1
         btnDashboard = New FontAwesome.Sharp.IconButton()
         Panel2 = New Panel()
         Label1 = New Label()
-        IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
+        IconHome = New FontAwesome.Sharp.IconPictureBox()
         PanelTitleBar = New Panel()
-        Label2 = New Label()
+        IconClose = New FontAwesome.Sharp.IconPictureBox()
+        lblFormTitle = New Label()
         IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
         PanelDesktop = New Panel()
         PanelMenu.SuspendLayout()
         Panel2.SuspendLayout()
-        CType(IconPictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(IconHome, ComponentModel.ISupportInitialize).BeginInit()
         PanelTitleBar.SuspendLayout()
+        CType(IconClose, ComponentModel.ISupportInitialize).BeginInit()
         CType(IconCurrentForm, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -187,7 +189,7 @@ Partial Class Form1
         ' Panel2
         ' 
         Panel2.Controls.Add(Label1)
-        Panel2.Controls.Add(IconPictureBox1)
+        Panel2.Controls.Add(IconHome)
         Panel2.Dock = DockStyle.Top
         Panel2.Location = New Point(0, 0)
         Panel2.Name = "Panel2"
@@ -205,24 +207,25 @@ Partial Class Form1
         Label1.TabIndex = 1
         Label1.Text = "Ghost" & vbCrLf & "Order" & vbCrLf & "System"
         ' 
-        ' IconPictureBox1
+        ' IconHome
         ' 
-        IconPictureBox1.BackColor = Color.Transparent
-        IconPictureBox1.ForeColor = Color.FromArgb(CByte(15), CByte(185), CByte(177))
-        IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Ghost
-        IconPictureBox1.IconColor = Color.FromArgb(CByte(15), CByte(185), CByte(177))
-        IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconPictureBox1.IconSize = 60
-        IconPictureBox1.Location = New Point(41, 20)
-        IconPictureBox1.Name = "IconPictureBox1"
-        IconPictureBox1.Size = New Size(110, 60)
-        IconPictureBox1.TabIndex = 0
-        IconPictureBox1.TabStop = False
+        IconHome.BackColor = Color.Transparent
+        IconHome.ForeColor = Color.FromArgb(CByte(15), CByte(185), CByte(177))
+        IconHome.IconChar = FontAwesome.Sharp.IconChar.Ghost
+        IconHome.IconColor = Color.FromArgb(CByte(15), CByte(185), CByte(177))
+        IconHome.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconHome.IconSize = 60
+        IconHome.Location = New Point(41, 20)
+        IconHome.Name = "IconHome"
+        IconHome.Size = New Size(110, 60)
+        IconHome.TabIndex = 0
+        IconHome.TabStop = False
         ' 
         ' PanelTitleBar
         ' 
         PanelTitleBar.BackColor = Color.FromArgb(CByte(75), CByte(101), CByte(132))
-        PanelTitleBar.Controls.Add(Label2)
+        PanelTitleBar.Controls.Add(IconClose)
+        PanelTitleBar.Controls.Add(lblFormTitle)
         PanelTitleBar.Controls.Add(IconCurrentForm)
         PanelTitleBar.Dock = DockStyle.Top
         PanelTitleBar.Location = New Point(200, 0)
@@ -230,16 +233,29 @@ Partial Class Form1
         PanelTitleBar.Size = New Size(916, 70)
         PanelTitleBar.TabIndex = 1
         ' 
-        ' Label2
+        ' IconClose
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.ForeColor = Color.White
-        Label2.Location = New Point(81, 27)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(42, 14)
-        Label2.TabIndex = 1
-        Label2.Text = "Home"
+        IconClose.BackColor = Color.FromArgb(CByte(75), CByte(101), CByte(132))
+        IconClose.IconChar = FontAwesome.Sharp.IconChar.X
+        IconClose.IconColor = Color.White
+        IconClose.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconClose.IconSize = 24
+        IconClose.Location = New Point(888, 4)
+        IconClose.Name = "IconClose"
+        IconClose.Size = New Size(28, 24)
+        IconClose.TabIndex = 1
+        IconClose.TabStop = False
+        ' 
+        ' lblFormTitle
+        ' 
+        lblFormTitle.AutoSize = True
+        lblFormTitle.Font = New Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        lblFormTitle.ForeColor = Color.White
+        lblFormTitle.Location = New Point(81, 27)
+        lblFormTitle.Name = "lblFormTitle"
+        lblFormTitle.Size = New Size(42, 14)
+        lblFormTitle.TabIndex = 1
+        lblFormTitle.Text = "Home"
         ' 
         ' IconCurrentForm
         ' 
@@ -276,9 +292,10 @@ Partial Class Form1
         PanelMenu.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(IconPictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(IconHome, ComponentModel.ISupportInitialize).EndInit()
         PanelTitleBar.ResumeLayout(False)
         PanelTitleBar.PerformLayout()
+        CType(IconClose, ComponentModel.ISupportInitialize).EndInit()
         CType(IconCurrentForm, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
@@ -292,10 +309,11 @@ Partial Class Form1
     Friend WithEvents btnCustomers As FontAwesome.Sharp.IconButton
     Friend WithEvents btnProducts As FontAwesome.Sharp.IconButton
     Friend WithEvents btnSetting As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
+    Friend WithEvents IconHome As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PanelTitleBar As Panel
     Friend WithEvents IconCurrentForm As FontAwesome.Sharp.IconPictureBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblFormTitle As Label
     Friend WithEvents PanelDesktop As Panel
+    Friend WithEvents IconClose As FontAwesome.Sharp.IconPictureBox
 End Class
